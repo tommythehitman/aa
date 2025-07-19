@@ -1,0 +1,166 @@
+/* Catalog Page Styles */
+.catalog-filter {
+  background-color: #F5F5F5;
+  padding: 24px 0;
+  border-bottom: 1px solid #E5E5E5;
+  position: sticky;
+  top: 73px;
+  z-index: 99;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.filter-left {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #E5E5E5;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+.filter-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 16px;
+  border: 1px solid #E5E5E5;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.clear-filters {
+  color: #E2231A;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.clear-filters:hover {
+  color: #B01E17;
+}
+
+.catalog-results {
+  padding: 48px 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.part-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.part-item:last-child {
+  border-bottom: none;
+}
+
+.part-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.part-details h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2A2A2A;
+}
+
+.part-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.part-brand {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.part-link {
+  color: #E2231A;
+  font-size: 14px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.part-link:hover {
+  color: #B01E17;
+}
+
+.results-info {
+  margin-bottom: 32px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive Catalog */
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .filter-container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .filter-left {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .part-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .part-thumbnail {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .filter-left {
+    gap: 12px;
+  }
+  
+  .filter-select,
+  .search-input {
+    min-width: auto;
+    flex: 1;
+  }
+}

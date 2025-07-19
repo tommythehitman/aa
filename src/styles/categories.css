@@ -1,0 +1,81 @@
+/* Popular Categories Section */
+.categories {
+  background-color: #F5F5F5;
+  padding: 80px 0;
+}
+
+.categories h2 {
+  text-align: center;
+  margin-bottom: 64px;
+  color: #2A2A2A;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #FFFFFF;
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-4px);
+}
+
+.category-image {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.category-content h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #2A2A2A;
+}
+
+.category-content p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.category-link {
+  color: #E2231A;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.category-link:hover {
+  color: #B01E17;
+}
+
+/* Responsive Categories */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .category-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .category-image {
+    width: 100%;
+    max-width: 300px;
+  }
+}

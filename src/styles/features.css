@@ -1,0 +1,70 @@
+/* Features Section Styles */
+.features {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.features-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.feature:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -24px;
+  width: 1px;
+  height: 100%;
+  background-color: #E5E5E5;
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #E2231A;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.feature h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #2A2A2A;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #666;
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Features */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+  }
+  
+  .feature:not(:last-child)::after {
+    display: none;
+  }
+  
+  .feature {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
